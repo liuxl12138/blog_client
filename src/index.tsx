@@ -12,3 +12,14 @@ root.render(
         <div></div>
     </React.StrictMode>
 );
+
+fetch('/jian/subscriptions/recommended_collections')
+    .then(response => response.json())
+    .then(value => {
+        console.log('简书：', value);
+    });
+fetch('/zhi/news/latest')
+    .then(response => response.json())
+    .then(value => {
+        console.log('知乎', value);
+    });
